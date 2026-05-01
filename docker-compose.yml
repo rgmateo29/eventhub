@@ -1,0 +1,8 @@
+services:
+  playwright:
+    build: .
+    volumes:
+      # HTML report and failure artifacts are written to the host so they
+      # persist after the container exits and can be opened in a browser.
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results

@@ -11,6 +11,20 @@ EventHub is a full-stack event ticket booking platform built for QA training. Us
 - **Auth**: JWT (7-day expiry) via `bcryptjs`; token stored in `localStorage` as `token`
 - **Testing**: Playwright E2E (Chromium only), targeting `https://eventhub.rahulshettyacademy.com`
 
+## Running Tests with Docker
+
+No local Node.js, browsers, or dependencies required.
+
+```bash
+# Build image and run all tests (first run downloads Chromium — cached after)
+docker compose run --rm playwright
+
+# Rebuild the image after changing test files or dependencies
+docker compose run --rm --build playwright
+```
+
+The HTML report is written to `./playwright-report/` on the host. Open `playwright-report/index.html` in a browser to view results. Failure screenshots and videos land in `./test-results/`.
+
 ## Commands
 
 ```bash

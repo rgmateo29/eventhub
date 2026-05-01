@@ -1,0 +1,18 @@
+# Source directories not needed by the test runner
+backend/
+frontend/
+
+# Generated output
+node_modules/
+.next/
+playwright-report/
+test-results/
+
+# Version control and tooling
+.git/
+.github/
+.claude/
+
+# Docs
+docs/
+*.md
